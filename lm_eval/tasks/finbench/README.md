@@ -1,5 +1,5 @@
 ## Results
-### gpt-finnish-8B
+### gpt3-finnish-8B
 
 | Tasks                                              | Version | Filter | n-shot | Metric |     |  Value |     | Stderr |
 | -------------------------------------------------- | ------: | ------ | -----: | ------ | --- | -----: | --- | -----: |
@@ -34,7 +34,7 @@
 |FIN-bench_sentence_ambiguity_multiple_choice      |      1|none  |     0|acc   |↑  |0.5208|±  |0.0323|
 |FIN-bench_similarities_abstraction_multiple_choice|      1|none  |     0|acc   |↑  |0.6316|±  |0.0277|
 
-### gpt-finnish-xl
+### gpt3-finnish-xl
 
 |                      Tasks                       |Version|Filter|n-shot|Metric|   |Value |   |Stderr|
 |--------------------------------------------------|------:|------|-----:|------|---|-----:|---|-----:|
