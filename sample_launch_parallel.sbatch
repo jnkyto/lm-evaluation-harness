@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=lm-eval-harness
-#SBATCH --account=project_000000000
-#SBATCH --time=02:30:00
-#SBATCH --partition=small-g
+#SBATCH --account=< PROJECT NO >
+#SBATCH --time=00:05:00
+#SBATCH --partition=dev-g
 #SBATCH --mem=0
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=56
@@ -11,8 +11,6 @@
 #SBATCH --exclusive
 #SBATCH --output=slurm_out/slurm_%j.out
 #SBATCH --error=slurm_out/slurm_%j.err
-
-### Sample slurm launch script for lm-evaluation-harness for use in the LUMI HPC-environment ###
 
 # Create log directory if it doesn't exist
 mkdir -p slurm_out
@@ -33,26 +31,37 @@ echo "PWD: $PWD"
 
 module use /appl/local/csc/modulefiles
 module load pytorch
-export HF_HOME=/scratch/project_000000000/hf_cache
-# lm-evaluation-harness needs SacreBLEU, which I installed with `pip install --user` like this:
-# https://docs.csc.fi/support/tutorials/python-usage-guide/#__tabbed_1_2
-export PYTHONUSERBASE=/projappl/project_000000000/username/lm-venv
+export HF_HOME=< HF_HOME >
+export HF_TOKEN=< TOKEN >	# not required
+export PYTHONUSERBASE=< PYTHONUSERBASE >
 
 echo "JOB $SLURM_JOBID START TIME: $(date)"
 
 echo "JOBNAME: $SLURM_JOB_NAME"
 
-MODEL_NAME="LumiOpen/Poro-34B"
-DTYPE="bfloat16"
+###########################################
+# THIS IS PROBABLY WHAT YOU WANT TO TWEAK #
+###########################################
 
-CMD="python -m lm_eval \
-  --model hf \
-	--model_args pretrained=$MODEL_NAME,dtype=$DTYPE,parallelize=True \
-	--tasks task,names,separated,like,this \
-	--output_path output/ \
-	--trust_remote_code \
-	--batch_size 8"
+MODEL_NAME="< ACCOUNT/MODEL_NAME >"
+DTYPE="auto"
+NUM_FEWSHOT=3
 
-srun $CMD
+CMD_PARAMS=(
+  "--model" "hf"
+  "--model_args" "pretrained=$MODEL_NAME,tokenizer=$MODEL_NAME,dtype=$DTYPE,parallelize=True,max_memory_per_gpu=60GB"
+  "--tasks" "finbench_multiple_choice"
+  "--num_fewshot" "$NUM_FEWSHOT"
+  "--output_path" "./output/"
+  "--trust_remote_code"
+  "--max_batch_size" "20"
+  "--write_out"
+  "--log_samples"
+  "--seed" "42"
+)
+
+CMD="python -m lm_eval ${CMD_PARAMS[@]}"
+
+srun $CMD 
 
 echo "JOB $SLURM_JOBID END TIME: $(date)"
