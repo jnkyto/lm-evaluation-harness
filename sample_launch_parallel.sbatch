@@ -39,10 +39,6 @@ echo "JOB $SLURM_JOBID START TIME: $(date)"
 
 echo "JOBNAME: $SLURM_JOB_NAME"
 
-###########################################
-# THIS IS PROBABLY WHAT YOU WANT TO TWEAK #
-###########################################
-
 MODEL_NAME="< ACCOUNT/MODEL_NAME >"
 DTYPE="auto"
 NUM_FEWSHOT=3
