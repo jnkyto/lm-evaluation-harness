@@ -1,0 +1,9 @@
+"dataset_name": "us_foreign_policy_RO"
+"description": "Următoarele sunt întrebări cu alegere multiplă (cu răspunsuri) despre\
+  \ politica externă a SUA."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nRăspuns:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_RO_social_sciences"
+"task": "ogx_mmlux_ro-us_foreign_policy"

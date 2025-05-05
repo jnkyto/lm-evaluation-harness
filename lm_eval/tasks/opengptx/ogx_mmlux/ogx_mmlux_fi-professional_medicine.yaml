@@ -1,0 +1,9 @@
+"dataset_name": "professional_medicine_FI"
+"description": "Seuraavassa on monivalintakysymyksiä (ja vastauksia) ammatillisesta\
+  \ lääketieteestä."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nVastaa:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_FI_other"
+"task": "ogx_mmlux_fi-professional_medicine"

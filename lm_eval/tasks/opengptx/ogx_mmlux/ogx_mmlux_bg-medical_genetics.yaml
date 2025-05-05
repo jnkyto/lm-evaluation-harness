@@ -1,0 +1,8 @@
+"dataset_name": "medical_genetics_BG"
+"description": "Следват въпроси с избор между няколко отговора за медицинската генетика."
+"doc_to_choice": "['А', 'Б', 'В', 'Г']"
+"doc_to_text": "{{question.strip()}}\nА. {{choices[0]}}\nБ. {{choices[1]}}\nВ. {{choices[2]}}\n\
+  Г. {{choices[3]}}\nОтговор:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_BG_other"
+"task": "ogx_mmlux_bg-medical_genetics"

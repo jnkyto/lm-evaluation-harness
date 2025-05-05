@@ -1,0 +1,8 @@
+"dataset_name": "elementary_mathematics_LT"
+"description": "Toliau pateikiami klausimai su atsakymais apie elementariąją matematiką."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nAtsakymas:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_LT_stem"
+"task": "ogx_mmlux_lt-elementary_mathematics"

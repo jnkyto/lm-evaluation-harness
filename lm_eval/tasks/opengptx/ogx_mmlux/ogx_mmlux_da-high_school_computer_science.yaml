@@ -1,0 +1,9 @@
+"dataset_name": "high_school_computer_science_DA"
+"description": "Følgende er multiple choice-spørgsmål (med svar) om computervidenskab\
+  \ i gymnasiet."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nSvar:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_DA_stem"
+"task": "ogx_mmlux_da-high_school_computer_science"

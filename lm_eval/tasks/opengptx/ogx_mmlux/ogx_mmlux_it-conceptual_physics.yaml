@@ -1,0 +1,9 @@
+"dataset_name": "conceptual_physics_IT"
+"description": "Le seguenti sono domande a scelta multipla (con relative risposte)\
+  \ sulla fisica concettuale."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nRisposta:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_IT_stem"
+"task": "ogx_mmlux_it-conceptual_physics"

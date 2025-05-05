@@ -1,0 +1,9 @@
+"dataset_name": "human_sexuality_PT-PT"
+"description": "Seguem-se perguntas de escolha múltipla (com respostas) sobre a sexualidade\
+  \ humana."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nResposta:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_PT-PT_social_sciences"
+"task": "ogx_mmlux_pt-pt-human_sexuality"

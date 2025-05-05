@@ -1,0 +1,9 @@
+"dataset_name": "computer_security_ET"
+"description": "Järgnevalt on esitatud valikvastustega küsimused (koos vastustega)\
+  \ arvutiturbe kohta."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nVastus:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_ET_stem"
+"task": "ogx_mmlux_et-computer_security"

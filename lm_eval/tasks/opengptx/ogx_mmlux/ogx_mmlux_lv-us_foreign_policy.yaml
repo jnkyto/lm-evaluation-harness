@@ -1,0 +1,8 @@
+"dataset_name": "us_foreign_policy_LV"
+"description": "Tālāk ir jautājumi ar atbilžu variantiem par ASV ārpolitiku."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nAtbilde:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_LV_social_sciences"
+"task": "ogx_mmlux_lv-us_foreign_policy"

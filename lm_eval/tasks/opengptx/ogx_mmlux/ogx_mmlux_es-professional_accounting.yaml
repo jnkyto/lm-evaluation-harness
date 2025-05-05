@@ -1,0 +1,9 @@
+"dataset_name": "professional_accounting_ES"
+"description": "Las siguientes son preguntas tipo test (con respuestas) sobre contabilidad\
+  \ profesional."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nRespuesta:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_ES_other"
+"task": "ogx_mmlux_es-professional_accounting"

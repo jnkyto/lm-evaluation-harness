@@ -1,0 +1,9 @@
+"dataset_name": "conceptual_physics_FI"
+"description": "Seuraavassa on monivalintakysymyksiä (vastauksineen) käsitteellisestä\
+  \ fysiikasta."
+"doc_to_choice": "['A', 'B', 'C', 'D']"
+"doc_to_text": "{{question.strip()}}\nA. {{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}\n\
+  D. {{choices[3]}}\nVastaa:"
+"include": "_default_mmlux_template_yaml"
+"tag": "ogx_mmlux_FI_stem"
+"task": "ogx_mmlux_fi-conceptual_physics"
